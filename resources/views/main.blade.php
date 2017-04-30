@@ -6,6 +6,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <style type="text/css">
     #wrapper {
+      text-align: left;
+      color: #655864;
       padding-left: 250px;
       transition: all 0.4s ease 0s;
     }
@@ -26,15 +28,24 @@
       transition: all 0.4s ease 0s;
     }
 
+h1{
+  text-align: center;
+  font-size: 44px;
+  font-weight: bold;
+}
     #wrapper.active {
+      color: black;
       padding-left: 0;
     }
 
     #wrapper.active #sidebar-wrapper {
+
       left: 0;
     }
 
     #page-content-wrapper {
+
+
         background-color: #2EEE7B;
       width: 100%;
       padding-top: 70px;
@@ -42,6 +53,8 @@
     }
 
     .sidebar-nav {
+
+
       color: black;
       position: absolute;
       top: 0;
@@ -56,18 +69,48 @@
       text-indent: 20px;
     }
 
+    #logo{
+      width: 200px;
+      height: 130px;
+    }
+    #huella{
+
+
+      width: 120px;
+      height: 70px;
+    }
+
+
+
+
+    .footer{
+      position: absolute;
+      text-align: center;
+      padding-right:-100px;
+      width: 90px;
+      height: 60px;
+      background: black;
+      color: black;
+
+
+
+    }
+
     .sidebar-nav li a {
-      color: #999999;
+
+      color: red;
       display: block;
       text-decoration: none;
       padding-left: 60px;
     }
 
     .sidebar-nav li a span:before {
+
+
       position: absolute;
       left: 0;
       color: #41484c;
-      text-align: center;
+
       width: 20px;
       line-height: 18px;
     }
@@ -100,6 +143,7 @@
     }
 
     #menu-toggle {
+      text-align: center;
         text-decoration: none;
         float: left;
         color: #fff;
@@ -147,6 +191,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
+
+                    <!-- <div id="cuenta">
+
+                    <b>Acceder a mi cuenta</b>
+                    <br>
+                    <li>Register <i class="material-icons">assignment_ind</i></li>
+                    <br>
+                    <li>Entrar <i class="material-icons">help</i></li>
+
+                    </a>
+                    </div> -->
+
+
                     <div  class="navbar-brand">
                         <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
                             <i class="fa fa-bars"></i>
@@ -171,51 +229,82 @@
             <nav id="spy">
                 <ul class="sidebar-nav nav">
                     <li class="sidebar-brand">
-                        <a href="#home"><span class="fa fa-home solo">link1</span></a>
+                        <a href="#home"><span class="fa fa-home solo">  <li>Register <i class="material-icons">assignment_ind</i></li></span></a>
                     </li>
                         <li>
                             <a href="#home">
-                                <span class="fa fa-anchor solo">home 1</span>
+                                <span class="fa fa-anchor solo">   <li>Entrar <i class="material-icons">help</i></li></span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#species">
-                                <span class="fa fa-anchor solo">species</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact">
-                                <span class="fa fa-anchor solo">conact</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#faq">
-                                <span class="fa fa-anchor solo">faq</span>
-                            </a>
-                        </li>
+
                 </ul>
             </nav>
         </div>
-        <!-- Page content -->
-        <div id="page-content-wrapper">
+        <br>
+        <br>
+        <br>
+        <br>
 
-<img id="logo" src="{{ asset('img/Cachora2.png')  }}" >
+
+
+        <!-- Page content -->
+         <h1>Trace Invaders</h1><img id="logo" src="{{ asset('img/Cachora2.png' )  }}"  >
+
+
+        <div id="page-content-wrapper">
+          <br>
 
 
           <!-- <img  src="img/Cachora2.png" alt="logo" width="300px" height="180px"> -->
-<h1>Trace Invader</h1>
+
+<br>
+
+
 
             <div class="page-content">
-              1234567890
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="panel panel-danger">
-                                <div class="panel-heading">
-                                        Panel 1
-                                </div>
+
                                 <div class="panel-body">
-                                    content body
+                                  <h2 class="w3-center">New species:</h2>
+
+
+
+                                  <div class="w3-content w3-display-container">
+
+                                    <img class="mySlides" src="img/img1.jpg" alt="" width="600px" height="400px">
+                                    <img class="mySlides" src="img/img2.jpg" alt="" width="600px" height="400px">
+                                    <img class="mySlides" src="img/img3.jpg" alt="" width="600px" height="400px">
+
+
+                                  </div>
+
+
+                                    </body>
+
+                                    <script>
+                                    var myIndex = 0;
+                                    carousel();
+
+                                    function carousel() {
+                                        var i;
+                                        var x = document.getElementsByClassName("mySlides");
+                                        for (i = 0; i < x.length; i++) {
+                                           x[i].style.display = "none";
+                                        }
+                                        myIndex++;
+                                        if (myIndex > x.length) {myIndex = 1}
+                                        x[myIndex-1].style.display = "block";
+                                        setTimeout(carousel, 2000); // Change image every 2 seconds
+                                    }
+                                    </script>
+
+
+
+
                                 </div>
                             </div>
                         </div>
@@ -247,4 +336,29 @@
       });
   </script>
 
-</html>
+
+
+
+
+  <br>
+
+<div id="footer">
+
+    <b>
+      <li>
+        <a href="http://www.facebook.com">
+    <img src="img/fb.jpg" alt="" width="100" height="90">
+    </a>
+
+
+    <a href="http://www.twitter.com">
+    <img src="img/twi.jpg" alt=""  width="100" height="90">
+    </a>
+    <a href="http://www.instagram.com">
+
+    <img src="img/insta.png" alt=""  width="100" height="90">
+    </li></a>
+
+  </div>
+  </b>
+    </html>
