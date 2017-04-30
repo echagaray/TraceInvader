@@ -33,10 +33,11 @@ h1{
   font-size: 44px;
   font-weight: bold;
 }
-    #wrapper.active {
-      color: black;
-      padding-left: 0;
-    }
+#wrapper.active {
+  color: black;
+  background: yellow;
+  padding-left: 0;
+}
 
     #wrapper.active #sidebar-wrapper {
 
@@ -226,27 +227,44 @@ margin:0 auto;
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
 
-                      <a href="/">  <li>Home <i class="material-icons">assignment_ind </a></li></i>
-                        <a href="species">  <li>Species <i class="material-icons">pets </a></li></i>
-                          <a href="contact">  <li>Contact <i class="material-icons">account_balance </a></li></i>
-                            <a href="faq">  <li>Faq <i class="material-icons">help </a></li></i>
 
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
-        </nav>
-        <!-- PARTE LATERAL -->
-        <div id="sidebar-wrapper">
-            <nav id="spy">
-                <ul class="sidebar-nav nav">
-                    <li class="sidebar-brand">
-                        <a href="#home"><span class="fa fa-home solo">  <li>Register <i class="material-icons">assignment_ind</i></li></span></a>
-                    </li>
-                        <li>
-                            <a href="#home">
-                                <span class="fa fa-anchor solo">   <li>Entrar <i class="material-icons">help</i></li></span>
-                            </a>
-                        </li>
+                                                  <a href="register">  <li>Register <i class="material-icons">assignment_ind </a></li></i>
+                                                  <a href="login">  <li>Log In <i class="material-icons">assignment_ind </a></li></i>
+
+                                          </ul>
+                                      </div><!--/.nav-collapse -->
+                                  </div>
+                              </nav>
+                              <!-- PARTE LATERAL -->
+                              <div id="sidebar-wrapper">
+                                  <nav id="spy">
+                                      <ul class="sidebar-nav nav">
+
+                                          <li class="sidebar-brand">
+
+
+
+                                              <a href="/"><span class="fa fa-home solo">  <li>Home <i class="material-icons">assignment_ind  </a></li></i></span></a>
+                                          </li>
+                                              <li>
+                                                  <a href="species">
+                                                      <span class="fa fa-anchor solo">   <li>Species <i class="material-icons">pets</i></li></span>
+                                                  </a>
+                                              </li>
+                                            <li>
+
+                                                  <a href="contact">
+                                                      <span class="fa fa-anchor solo">  <li>Contact <i class="material-icons">account_balance </a></li></i></span>
+                                                  </a>
+                                              </li>
+
+                                              <li>
+
+                                                    <a href="faq">
+                                                        <span class="fa fa-anchor solo">  <li>Faq <i class="material-icons">help </a></li></i></span>
+                                                    </a>
+                                                </li>
+
 
                 </ul>
             </nav>

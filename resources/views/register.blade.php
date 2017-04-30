@@ -33,11 +33,10 @@ h1{
   font-size: 44px;
   font-weight: bold;
 }
-#wrapper.active {
-  color: black;
-  background: yellow;
-  padding-left: 0;
-}
+    #wrapper.active {
+      color: black;
+      padding-left: 0;
+    }
 
     #wrapper.active #sidebar-wrapper {
 
@@ -54,7 +53,9 @@ h1{
     }
 
     .sidebar-nav {
-      color: yellow;
+
+
+      color: black;
       position: absolute;
       top: 0;
       width: 250px;
@@ -64,7 +65,6 @@ h1{
     }
 
     .sidebar-nav li {
-        color: yellow;
       line-height: 40px;
       text-indent: 20px;
     }
@@ -83,16 +83,12 @@ h1{
 
 
 
-    .footer{
-      position: absolute;
-      text-align: center;
-      padding-right:-100px;
+    footer{
+      display: inline-block;
       width: 90px;
       height: 60px;
       background: black;
       color: black;
-
-
     }
 
     .sidebar-nav li a {
@@ -108,7 +104,7 @@ h1{
 
       position: absolute;
       left: 0;
-        color: yellow;
+      color: #41484c;
 
       width: 20px;
       line-height: 18px;
@@ -265,101 +261,123 @@ h1{
         <!-- Page content -->
          <h1>Trace Invaders</h1><img id="logo" src="{{ asset('img/Cachora2.png' )  }}"  >
 
+         <div id="page-content-wrapper">
+           <br>
 
-        <div id="page-content-wrapper">
-          <br>
+
+           <!-- <img  src="img/Cachora2.png" alt="logo" width="300px" height="180px"> -->
+
+       <br>
 
 
-          <!-- <img  src="img/Cachora2.png" alt="logo" width="300px" height="180px"> -->
+
+             <div class="page-content">
+
+                 <div class="container-fluid">
+                     <div class="row">
+                         <div class="col-md-6">
+                             <div class="panel panel-danger">
+
+                                 <div class="panel-body">
+                                             <div class="page-content">
+
+                                                 <div class="container-fluid">
+                                                     <div class="row">
+                                                         <div class="col-md-6">
+                                                             <div class="panel panel-danger">
+
+                                                                 <div class="panel-body">
+                                                                 </body>
+
+       <!-- CSS LOGIN -->
+       <div class="container-fluid">
+
+
+                                   <h2 class="w3-center">Register:</h2>
+
+
+                                 </div>
+
+       <form class="navbar-form navbar-left" role="search">
+
+
+                                                  </div>
+                                              </div>
+
+
+                <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Email:</span>
+              <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+              </div>
+              <br>
+                <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1"> Password: </span>
+              <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+              </div>
+              <br>
+                <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1"> Password: </span>
+              <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+              </div>
+<br>
+            <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">  Fist name </span>
+            <input type="text" class="form-control" placeholder="Fist name" aria-describedby="basic-addon1">
+            </div>
+<br>
+            <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">  Last name </span>
+          <input type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
+          </div>
+<br>
+<div class="input-group">
+<span class="input-group-addon" id="basic-addon1"> Security Question: </span>
+<input type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
+</div>
+
+<br>
+  <button type="button" class="btn btn-primmary">Register</button>
+  <button type="button" class="btn btn-primmary">Cancel</button>
+</div>
+  </div>
+     </div>
+      </div>
+<br>
 
 <br>
 
-
-
-            <div class="page-content">
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="panel panel-danger">
-
-                                <div class="panel-body">
-                                  <h2 class="w3-center">Species:</h2>
-
-
-
-
-
-                                    </body>
-
-
-
-
-
-
-                                </div>
-                            </div>
-                        </div>
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-            </div>
-        </div>
+</form>
 
 
 
     </div>
-  </body>
-  <script>
-  var myIndex = 0;
-  carousel();
 
-  function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}
-      x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 2000); // Change image every 2 seconds
-  }
-  </script>
-  <script type="text/javascript">
 
-      /*Menu-toggle*/
-      $("#menu-toggle").click(function(e) {
-          e.preventDefault();
-          $("#wrapper").toggleClass("active");
-      });
-  </script>
 
 
 
 
 
   <br>
+  <footer class="fuuter">
 
-<div id="footer">
+        <li>
+          <a href="http://www.facebook.com">
+      <img src="img/fb.jpg" alt="" width="100" height="90">
+      </a>
+      </li>
 
-    <b>
       <li>
-        <a href="http://www.facebook.com">
-    <img src="img/fb.jpg" alt="" width="100" height="90">
-    </a>
+      <a href="http://www.twitter.com">
+      <img src="img/twi.jpg" alt=""  width="100" height="90">
+      </a>
+      <a href="http://www.instagram.com">
+  </li>
+  <li>
+      <img src="img/insta.png" alt=""  width="100" height="90">
+      </li>  </a>
 
+    </div>
 
-    <a href="http://www.twitter.com">
-    <img src="img/twi.jpg" alt=""  width="100" height="90">
-    </a>
-    <a href="http://www.instagram.com">
-
-    <img src="img/insta.png" alt=""  width="100" height="90">
-    </li></a>
-
-  </div>
-  </b>
+    </footer>
     </html>

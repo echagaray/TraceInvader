@@ -13,20 +13,21 @@
     }
 
 /*barra lateral !!*/
-    #sidebar-wrapper {
-      margin-left: -250px;
-      top: 51px;
-      left: 250px;
-      width: 250px;
-      color: black;
-      background: #2ED7EE;
+#sidebar-wrapper {
+  margin-left: -250px;
+  top: 51px;
+  left: 250px;
+  width: 250px;
+  color: black;
+  background: #2ED7EE;
 
-      position: fixed;
-      height: 100%;
-      overflow-y: auto;
-      z-index: 1000;
-      transition: all 0.4s ease 0s;
-    }
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
 
 h1{
   text-align: center;
@@ -54,7 +55,9 @@ h1{
     }
 
     .sidebar-nav {
-      color: yellow;
+
+
+      color: black;
       position: absolute;
       top: 0;
       width: 250px;
@@ -64,7 +67,6 @@ h1{
     }
 
     .sidebar-nav li {
-        color: yellow;
       line-height: 40px;
       text-indent: 20px;
     }
@@ -83,17 +85,16 @@ h1{
 
 
 
-    .footer{
-      position: absolute;
-      text-align: center;
-      padding-right:-100px;
+
+
+    footer{
+      display: inline-block;
       width: 90px;
       height: 60px;
       background: black;
       color: black;
-
-
     }
+
 
     .sidebar-nav li a {
 
@@ -108,7 +109,7 @@ h1{
 
       position: absolute;
       left: 0;
-        color: yellow;
+      color: #41484c;
 
       width: 20px;
       line-height: 18px;
@@ -148,6 +149,7 @@ h1{
         color: #fff;
         padding-right: 15px;
     }
+
 
     @media (max-width:767px) {
 
@@ -192,18 +194,6 @@ h1{
                     </button>
 
 
-                    <!-- <div id="cuenta">
-
-                    <b>Acceder a mi cuenta</b>
-                    <br>
-                    <li>Register <i class="material-icons">assignment_ind</i></li>
-                    <br>
-                    <li>Entrar <i class="material-icons">help</i></li>
-
-                    </a>
-                    </div> -->
-
-
                     <div  class="navbar-brand">
                         <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
                             <i class="fa fa-bars"></i>
@@ -213,7 +203,6 @@ h1{
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-
                                                   <a href="register">  <li>Register <i class="material-icons">assignment_ind </a></li></i>
                                                   <a href="login">  <li>Log In <i class="material-icons">assignment_ind </a></li></i>
 
@@ -284,26 +273,49 @@ h1{
                             <div class="panel panel-danger">
 
                                 <div class="panel-body">
-                                  <h2 class="w3-center">Species:</h2>
+                                            <div class="page-content">
+
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="panel panel-danger">
+
+                                                                <div class="panel-body">
+                                                                </body>
+
+<!-- CSS LOGIN -->
+<div class="container-fluid">
 
 
-
-
-
-                                    </body>
-
-
-
-
+                                  <h2 class="w3-center">Login:</h2>
 
 
                                 </div>
                             </div>
-                        </div>
+<form class="navbar-form navbar-left" role="search">
 
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
+                            <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1">@</span>
+                      <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                      </div>
+                            <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">  # </span>
+                        <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+                      </div>
+                      <br>
+                      <button type="button" class="btn btn-large">Login</button>
+                      <button type="button" class="btn btn-primmary">Cancel</button>
+                        </div>
+                        <br>
+
+                      <br>
+
+                        </form>
+
+
+</div>
+
+              </div>
                 </div>
             </div>
         </div>
@@ -312,30 +324,6 @@ h1{
 
     </div>
   </body>
-  <script>
-  var myIndex = 0;
-  carousel();
-
-  function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}
-      x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 2000); // Change image every 2 seconds
-  }
-  </script>
-  <script type="text/javascript">
-
-      /*Menu-toggle*/
-      $("#menu-toggle").click(function(e) {
-          e.preventDefault();
-          $("#wrapper").toggleClass("active");
-      });
-  </script>
 
 
 
@@ -343,23 +331,25 @@ h1{
 
   <br>
 
-<div id="footer">
+<footer class="fuuter">
 
-    <b>
       <li>
         <a href="http://www.facebook.com">
     <img src="img/fb.jpg" alt="" width="100" height="90">
     </a>
+    </li>
 
-
+    <li>
     <a href="http://www.twitter.com">
     <img src="img/twi.jpg" alt=""  width="100" height="90">
     </a>
     <a href="http://www.instagram.com">
-
+</li>
+<li>
     <img src="img/insta.png" alt=""  width="100" height="90">
-    </li></a>
+    </li>  </a>
 
   </div>
-  </b>
+
+  </footer>
     </html>
