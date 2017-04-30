@@ -33,11 +33,10 @@ h1{
   font-size: 44px;
   font-weight: bold;
 }
-#wrapper.active {
-  color: black;
-  background: yellow;
-  padding-left: 0;
-}
+    #wrapper.active {
+      color: black;
+      padding-left: 0;
+    }
 
     #wrapper.active #sidebar-wrapper {
 
@@ -80,37 +79,21 @@ h1{
       width: 120px;
       height: 70px;
     }
-.contacus
-{
-  padding-right: 90px;
-  margin-right: 60px;
-text-align: center;
-margin:0 auto;
-}
-
-    #mapa{
-
-      text-align: center;
-      margin: 0 auto;
-      }
 
 
 
-    .footer{
-      position: absolute;
-      text-align: center;
-      padding-right:-100px;
+
+    footer{
+      display: inline-block;
       width: 90px;
       height: 60px;
       background: black;
       color: black;
-
-
     }
 
     .sidebar-nav li a {
 
-  color: black;
+      color: black;
       display: block;
       text-decoration: none;
       padding-left: 60px;
@@ -227,7 +210,6 @@ margin:0 auto;
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
 
-
                                                   <a href="register">  <li>Register <i class="material-icons">assignment_ind </a></li></i>
                                                   <a href="login">  <li>Log In <i class="material-icons">assignment_ind </a></li></i>
 
@@ -279,85 +261,123 @@ margin:0 auto;
         <!-- Page content -->
          <h1>Trace Invaders</h1><img id="logo" src="{{ asset('img/Cachora2.png' )  }}"  >
 
+         <div id="page-content-wrapper">
+           <br>
 
-        <div id="page-content-wrapper">
-          <br>
+
+           <!-- <img  src="img/Cachora2.png" alt="logo" width="300px" height="180px"> -->
+
+       <br>
 
 
-          <!-- <img  src="img/Cachora2.png" alt="logo" width="300px" height="180px"> -->
 
+             <div class="page-content">
+
+                 <div class="container-fluid">
+                     <div class="row">
+                         <div class="col-md-6">
+                             <div class="panel panel-danger">
+
+                                 <div class="panel-body">
+                                             <div class="page-content">
+
+                                                 <div class="container-fluid">
+                                                     <div class="row">
+                                                         <div class="col-md-6">
+                                                             <div class="panel panel-danger">
+
+                                                                 <div class="panel-body">
+                                                                 </body>
+
+       <!-- CSS LOGIN -->
+       <div class="container-fluid">
+
+
+                                   <h2 class="w3-center">Register:</h2>
+
+
+                                 </div>
+
+       <form class="navbar-form navbar-left" role="search">
+
+
+                                                  </div>
+                                              </div>
+
+
+                <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Email:</span>
+              <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+              </div>
+              <br>
+                <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1"> Password: </span>
+              <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+              </div>
+              <br>
+                <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1"> Password: </span>
+              <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+              </div>
 <br>
-
-
-
-            <div class="page-content">
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="panel panel-danger">
-
-
-<div class="contacus">
-                                  <h2>Contact with Us:</h2>
-
-
-<br>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </div>
-                </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-<div id="mapa">
-
-
-                <h1>Map:</h1>
-                <img id="mapa" src="{{ asset('img/mapa.jpg' )  }}"  >
-
-</div>
+            <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">  Fist name </span>
+            <input type="text" class="form-control" placeholder="Fist name" aria-describedby="basic-addon1">
             </div>
-        </div>
+<br>
+            <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">  Last name </span>
+          <input type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
+          </div>
+<br>
+<div class="input-group">
+<span class="input-group-addon" id="basic-addon1"> Security Question: </span>
+<input type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
+</div>
+
+<br>
+  <button type="button" class="btn btn-primmary">Register</button>
+  <button type="button" class="btn btn-primmary">Cancel</button>
+</div>
+  </div>
+     </div>
+      </div>
+<br>
+
+<br>
+
+</form>
 
 
 
     </div>
-  </body>
-  <script type="text/javascript">
 
-      /*Menu-toggle*/
-      $("#menu-toggle").click(function(e) {
-          e.preventDefault();
-          $("#wrapper").toggleClass("active");
-      });
-  </script>
+
 
 
 
 
 
   <br>
+  <footer class="fuuter">
 
-<div id="footer">
+        <li>
+          <a href="http://www.facebook.com">
+      <img src="img/fb.jpg" alt="" width="100" height="90">
+      </a>
+      </li>
 
-    <b>
       <li>
-        <a href="http://www.facebook.com">
-    <img src="img/fb.jpg" alt="" width="100" height="90">
-    </a>
+      <a href="http://www.twitter.com">
+      <img src="img/twi.jpg" alt=""  width="100" height="90">
+      </a>
+      <a href="http://www.instagram.com">
+  </li>
+  <li>
+      <img src="img/insta.png" alt=""  width="100" height="90">
+      </li>  </a>
 
+    </div>
 
-    <a href="http://www.twitter.com">
-    <img src="img/twi.jpg" alt=""  width="100" height="90">
-    </a>
-    <a href="http://www.instagram.com">
-
-    <img src="img/insta.png" alt=""  width="100" height="90">
-    </li></a>
-
-  </div>
-  </b>
+    </footer>
     </html>
