@@ -1,98 +1,349 @@
-<!doctype html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel = "stylesheet">
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style type="text/css">
+    #wrapper {
+      text-align: left;
+      color: #655864;
+      padding-left: 250px;
+      transition: all 0.4s ease 0s;
+    }
 
-        <title>Laravel</title>
+/*barra lateral !!*/
+    #sidebar-wrapper {
+      margin-left: -250px;
+      top: 51px;
+      left: 250px;
+      width: 250px;
+      color: black;
+      background: #2ED7EE;
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+      z-index: 1000;
+      transition: all 0.4s ease 0s;
+    }
 
-        <!-- Styles -->
-        <style>
-            html, body {
+h1{
+  text-align: center;
+  font-size: 44px;
+  font-weight: bold;
+}
+    #wrapper.active {
+      color: black;
+      padding-left: 0;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+
+      left: 0;
+    }
+
+    #page-content-wrapper {
 
 
-                color: #FFFFFF;
+        background-color: #2EEE7B;
+      width: 100%;
+      padding-top: 70px;
+      transition: all 0.4s ease 0s;
+    }
 
-              background-color: #2EEE7B;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    .sidebar-nav {
 
-            .full-height {
-                height: 100vh;
-            }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+      color: black;
+      position: absolute;
+      top: 0;
+      width: 250px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-            .position-ref {
-                position: relative;
-            }
+    .sidebar-nav li {
+      line-height: 40px;
+      text-indent: 20px;
+    }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+    #logo{
+      width: 200px;
+      height: 130px;
+    }
+    #huella{
 
-            .content {
-                text-align: center;
-            }
 
-            .title {
-                font-size: 84px;
-            }
+      width: 120px;
+      height: 70px;
+    }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+
+
+    .footer{
+      position: absolute;
+      text-align: center;
+      padding-right:-100px;
+      width: 90px;
+      height: 60px;
+      background: black;
+      color: black;
+
+
+    }
+
+    .sidebar-nav li a {
+
+      color: red;
+      display: block;
+      text-decoration: none;
+      padding-left: 60px;
+    }
+
+    .sidebar-nav li a span:before {
+
+
+      position: absolute;
+      left: 0;
+      color: #41484c;
+
+      width: 20px;
+      line-height: 18px;
+    }
+
+    .sidebar-nav li a:hover,
+    .sidebar-nav li.active {
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+      text-decoration: none;
+    }
+
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus {
+      text-decoration: none;
+    }
+
+    .sidebar-nav > .sidebar-brand {
+      height: 65px;
+      line-height: 60px;
+      font-size: 18px;
+    }
+
+    .sidebar-nav > .sidebar-brand a {
+      color: #999999;
+    }
+
+    .sidebar-nav > .sidebar-brand a:hover {
+      color: #fff;
+      background: none;
+    }
+
+    #menu-toggle {
+      text-align: center;
+        text-decoration: none;
+        float: left;
+        color: #fff;
+        padding-right: 15px;
+    }
+
+    @media (max-width:767px) {
+
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+
+    #menu-toggle {
+      display: inline-block;
+    }
+
+    }
+
+    </style>
+  <head>
+  <body>
+    <!-- MENU PARTE DE ARRIBA-->
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+
+                    <!-- <div id="cuenta">
+
+                    <b>Acceder a mi cuenta</b>
+                    <br>
+                    <li>Register <i class="material-icons">assignment_ind</i></li>
+                    <br>
+                    <li>Entrar <i class="material-icons">help</i></li>
+
+                    </a>
+                    </div> -->
+
+
+                    <div  class="navbar-brand">
+                        <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <a href="#">SpaceAppsChallenge</a>
+                    </div>
                 </div>
-            @endif
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                      <a href="#home">  <li>Home <i class="material-icons">assignment_ind </a></li></i>
+                        <a href="#species">  <li>Species <i class="material-icons">pets </a></li></i>
+                          <a href="#contact">  <li>Contact <i class="material-icons">account_balance </a></li></i>
+                            <a href="#faq">  <li>Faq <i class="material-icons">help </a></li></i>
 
-                <div class="links">
-                    <a href="#home">Home</a>
-                    <a href="https://laracasts.com">Species</a>
-                    <a href="https://laravel-news.com">Contact</a>
-                    <a href="https://forge.laravel.com">Faq</a>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- PARTE LATERAL -->
+        <div id="sidebar-wrapper">
+            <nav id="spy">
+                <ul class="sidebar-nav nav">
+                    <li class="sidebar-brand">
+                        <a href="#home"><span class="fa fa-home solo">  <li>Register <i class="material-icons">assignment_ind</i></li></span></a>
+                    </li>
+                        <li>
+                            <a href="#home">
+                                <span class="fa fa-anchor solo">   <li>Entrar <i class="material-icons">help</i></li></span>
+                            </a>
+                        </li>
 
+                </ul>
+            </nav>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+        <!-- Page content -->
+         <h1>Trace Invaders</h1><img id="logo" src="{{ asset('img/Cachora2.png' )  }}"  >
+
+
+        <div id="page-content-wrapper">
+          <br>
+
+
+          <!-- <img  src="img/Cachora2.png" alt="logo" width="300px" height="180px"> -->
+
+<br>
+
+
+
+            <div class="page-content">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-danger">
+
+                                <div class="panel-body">
+                                  <h2 class="w3-center">Home:</h2>
+
+
+
+
+
+                                    </body>
+
+                                    <script>
+                                    var myIndex = 0;
+                                    carousel();
+
+                                    function carousel() {
+                                        var i;
+                                        var x = document.getElementsByClassName("mySlides");
+                                        for (i = 0; i < x.length; i++) {
+                                           x[i].style.display = "none";
+                                        }
+                                        myIndex++;
+                                        if (myIndex > x.length) {myIndex = 1}
+                                        x[myIndex-1].style.display = "block";
+                                        setTimeout(carousel, 2000); // Change image every 2 seconds
+                                    }
+                                    </script>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                  Home
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+
+
+    </div>
+  </body>
+  <script type="text/javascript">
+
+      /*Menu-toggle*/
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("active");
+      });
+  </script>
+
+
+
+
+
+  <br>
+
+<div id="footer">
+
+    <b>
+      <li>
+        <a href="http://www.facebook.com">
+    <img src="img/fb.jpg" alt="" width="100" height="90">
+    </a>
+
+
+    <a href="http://www.twitter.com">
+    <img src="img/twi.jpg" alt=""  width="100" height="90">
+    </a>
+    <a href="http://www.instagram.com">
+
+    <img src="img/insta.png" alt=""  width="100" height="90">
+    </li></a>
+
+  </div>
+  </b>
+    </html>

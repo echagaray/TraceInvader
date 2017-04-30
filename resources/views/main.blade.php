@@ -35,6 +35,7 @@ h1{
 }
     #wrapper.active {
       color: black;
+      background: yellow;
       padding-left: 0;
     }
 
@@ -81,7 +82,10 @@ h1{
     }
 
 
-
+    #cuenta{
+      color: white;
+      text-align: ;
+    }
 
     .footer{
       position: absolute;
@@ -98,7 +102,7 @@ h1{
 
     .sidebar-nav li a {
 
-      color: red;
+      color: black;
       display: block;
       text-decoration: none;
       padding-left: 60px;
@@ -215,10 +219,10 @@ h1{
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
 
-                      <a href="#home">  <li>Home <i class="material-icons">assignment_ind </a></li></i>
-                        <a href="#species">  <li>Species <i class="material-icons">pets </a></li></i>
-                          <a href="#contact">  <li>Contact <i class="material-icons">account_balance </a></li></i>
-                            <a href="#faq">  <li>Faq <i class="material-icons">help </a></li></i>
+                      <a href="/">  <li>Home <i class="material-icons">assignment_ind </a></li></i>
+                        <a href="species">  <li>Species <i class="material-icons">pets </a></li></i>
+                          <a href="contact">  <li>Contact <i class="material-icons">account_balance </a></li></i>
+                            <a href="faq">  <li>Faq <i class="material-icons">help </a></li></i>
 
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -269,7 +273,7 @@ h1{
                             <div class="panel panel-danger">
 
                                 <div class="panel-body">
-                                  <h2 class="w3-center">New species:</h2>
+                                  <h2 class="w3-center">Main species:</h2>
 
 
 
@@ -360,5 +364,7 @@ h1{
     </li></a>
 
   </div>
+
+    <img src="img/huella.png" alt=""  width="100" height="90">
   </b>
     </html>

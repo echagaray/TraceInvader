@@ -79,7 +79,19 @@ h1{
       width: 120px;
       height: 70px;
     }
+.contacus
+{
+  padding-right: 90px;
+  margin-right: 60px;
+text-align: center;
+margin:0 auto;
+}
 
+    #mapa{
+
+      text-align: center;
+      margin: 0 auto;
+      }
 
 
 
@@ -97,7 +109,7 @@ h1{
 
     .sidebar-nav li a {
 
-      color: red;
+  color: black;
       display: block;
       text-decoration: none;
       padding-left: 60px;
@@ -214,10 +226,10 @@ h1{
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
 
-                      <a href="#home">  <li>Home <i class="material-icons">assignment_ind </a></li></i>
-                        <a href="#species">  <li>Species <i class="material-icons">pets </a></li></i>
-                          <a href="#contact">  <li>Contact <i class="material-icons">account_balance </a></li></i>
-                            <a href="#faq">  <li>Faq <i class="material-icons">help </a></li></i>
+                      <a href="/">  <li>Home <i class="material-icons">assignment_ind </a></li></i>
+                        <a href="species">  <li>Species <i class="material-icons">pets </a></li></i>
+                          <a href="contact">  <li>Contact <i class="material-icons">account_balance </a></li></i>
+                            <a href="faq">  <li>Faq <i class="material-icons">help </a></li></i>
 
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -267,28 +279,28 @@ h1{
                         <div class="col-md-6">
                             <div class="panel panel-danger">
 
-                                <div class="panel-body">
-                                  <h2 class="w3-center">Home:</h2>
+
+<div class="contacus">
+                                  <h2>Contact with Us:</h2>
 
 
-
-
-
-                                    </body>
-
-                                  
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                Welcome
-
+<br>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+<div id="mapa">
+
+
+                <h1>Map:</h1>
+                <img id="mapa" src="{{ asset('img/mapa.jpg' )  }}"  >
+
+</div>
             </div>
         </div>
 

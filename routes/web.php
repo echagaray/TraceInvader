@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('main');
 });
+
+// Route::get('/home', function () {
+//     return view('main');
+// });
 
 
 Route::get('/contact', function()
@@ -32,9 +36,7 @@ Route::get('/faq', function()
   return view('faq');
 });
 
-Route::get('blade', function () {
-    return view('child');
-});
+
 
 //
 
